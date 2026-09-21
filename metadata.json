@@ -1,0 +1,6 @@
+{
+  "name": "RB Restaurant - Ancient Flavours",
+  "description": "Luxury Indian fine-dining restaurant showcasing heritage culinary art, signature dishes, online reservations, and curated dining experiences.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
