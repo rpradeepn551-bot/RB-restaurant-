@@ -70,7 +70,7 @@ export const Experiences: React.FC<ExperiencesProps> = ({ onReserveExperience })
                     onClick={onReserveExperience}
                     className="text-xs font-bold tracking-wider uppercase text-[#D4A24C] hover:text-[#E8C27E] flex items-center gap-1 group-hover:translate-x-1 transition-all"
                   >
-                    <span>Reserve Seat</span>
+                    <span>Explore Experience</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>

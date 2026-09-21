@@ -12,7 +12,7 @@ import { StoryModal } from './components/StoryModal';
 import { CartDrawer } from './components/CartDrawer';
 import { Footer } from './components/Footer';
 import { CartItem, Dish } from './types';
-import { Calendar, Phone, Sparkles } from 'lucide-react';
+import { ShoppingBag, Phone, Sparkles } from 'lucide-react';
 
 export default function App() {
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -117,7 +117,7 @@ export default function App() {
         {/* Direct Contact Us Section with phone, email, hours, and direct inquiry form */}
         <ContactSection />
 
-        {/* Call-to-Action Reservation Banner */}
+        {/* Call-to-Action Royal Banquet Banner */}
         <section
           id="reservations-section"
           className="relative py-20 bg-gradient-to-b from-[#0B261D] to-[#071510] border-t border-[#1C4635] text-center px-4"
@@ -128,18 +128,18 @@ export default function App() {
               <span>THE ROYAL BANQUET AWAITS</span>
             </div>
             <h2 className="font-serif-display text-3xl sm:text-5xl font-bold text-white mb-6">
-              Reserve Your Evening of Ancient Flavours
+              An Evening of Ancient Flavours
             </h2>
             <p className="text-base sm:text-lg text-[#BACDC2] max-w-2xl mx-auto mb-8 font-sans-ui">
-              Whether celebrating milestones or indulging in an intimate culinary getaway, our maître d' welcomes you with timeless Indian warmth.
+              Whether celebrating milestones or indulging in an intimate culinary getaway, our kitchen welcomes you with timeless Indian warmth.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <button
-                onClick={() => setReservationOpen(true)}
-                id="cta-reserve-table-btn"
+                onClick={() => scrollToSection('specialities')}
+                id="cta-explore-menu-btn"
                 className="px-8 py-4 rounded-full text-xs font-bold tracking-[0.2em] uppercase bg-[#D4A24C] hover:bg-[#E5B65E] text-[#0A1A14] shadow-2xl transition-all transform hover:-translate-y-0.5 cursor-pointer"
               >
-                Book Your Table Online
+                Explore Signature Menu
               </button>
               <a
                 href="tel:+918007243463"
@@ -159,24 +159,18 @@ export default function App() {
         onOpenReservation={() => setReservationOpen(true)}
       />
 
-      {/* Floating Bottom Quick Reserve Pill on Mobile */}
-      <div className="lg:hidden fixed bottom-5 left-4 right-4 z-30 flex gap-2">
-        <button
-          onClick={() => setReservationOpen(true)}
-          className="flex-1 py-3 px-4 rounded-full text-xs font-bold tracking-widest uppercase bg-[#D4A24C] text-[#0A1A14] shadow-2xl flex items-center justify-center gap-2 border border-[#F5E2B4]"
-        >
-          <Calendar className="w-4 h-4" />
-          <span>RESERVE TABLE</span>
-        </button>
-        {totalCartCount > 0 && (
+      {/* Floating Bottom Bag on Mobile */}
+      {totalCartCount > 0 && (
+        <div className="lg:hidden fixed bottom-5 right-4 z-30">
           <button
             onClick={() => setCartOpen(true)}
-            className="py-3 px-5 rounded-full text-xs font-bold tracking-widest uppercase bg-[#0F3D2E] text-white shadow-2xl border border-[#28634E]"
+            className="py-3 px-5 rounded-full text-xs font-bold tracking-widest uppercase bg-[#D4A24C] text-[#0A1A14] shadow-2xl border border-[#F5E2B4] flex items-center gap-2 cursor-pointer"
           >
-            BAG ({totalCartCount})
+            <ShoppingBag className="w-4 h-4" />
+            <span>ORDER BAG ({totalCartCount})</span>
           </button>
-        )}
-      </div>
+        </div>
+      )}
 
       {/* Interactive Modals */}
       <ReservationModal

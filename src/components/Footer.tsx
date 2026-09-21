@@ -150,25 +150,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenReservation })
                 </span>
               )}
             </form>
-
-            <button
-              onClick={onOpenReservation}
-              className="mt-5 w-full py-2.5 rounded-full text-xs font-bold tracking-wider uppercase border border-[#D4A24C] text-[#D4A24C] hover:bg-[#D4A24C] hover:text-[#0A1813] transition-all text-center"
-            >
-              Book A Table
-            </button>
           </div>
 
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6F8A7D]">
+        <div className="pt-8 border-t border-[#143B2C] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#6F8A7D]">
           <p>© {new Date().getFullYear()} RB Restaurant & Culinary House. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <span className="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-white cursor-pointer transition-colors">Terms of Hospitality</span>
-            <span className="hover:text-white cursor-pointer transition-colors">Michelin Guide Accreditations</span>
-          </div>
+          <p className="text-[#8FA89B] tracking-wider uppercase text-[11px]">
+            Ancient Flavours Served with Soul
+          </p>
         </div>
       </div>
     </footer>

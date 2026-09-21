@@ -319,31 +319,6 @@ export const Specialities: React.FC<SpecialitiesProps> = ({
             })}
           </div>
         )}
-
-        {/* Free Delivery Banner */}
-        <div className="mt-16 bg-gradient-to-r from-[#0E3527] via-[#124231] to-[#0E3527] text-white rounded-2xl p-8 border border-[#235843] flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-          <div>
-            <div className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-[#D4A24C] mb-2">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>SPECIAL PROMOTION</span>
-            </div>
-            <h4 className="font-serif-display text-2xl sm:text-3xl font-bold text-white mb-2">
-              Free Express Delivery On Orders Above ₹99
-            </h4>
-            <p className="text-sm text-[#B7CDC0] max-w-xl">
-              Order your favorite starters, soups, curries, and biryanis. We deliver fresh and piping hot right to your doorstep with zero delivery charges.
-            </p>
-          </div>
-          <button
-            onClick={() => {
-              const offersEl = document.getElementById('offers');
-              if (offersEl) offersEl.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="px-6 py-3.5 rounded-full text-xs font-bold tracking-widest uppercase bg-[#D4A24C] text-[#0A1A14] hover:bg-[#E5B65E] transition-all shrink-0 shadow-lg cursor-pointer"
-          >
-            View 30 Offers
-          </button>
-        </div>
       </div>
     </section>
   );

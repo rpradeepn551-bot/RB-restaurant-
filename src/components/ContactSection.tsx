@@ -156,21 +156,6 @@ export const ContactSection: React.FC = () => {
                 </a>
               </div>
             </div>
-
-            {/* Delivery Promise Badge */}
-            <div className="bg-[#0E2E21] border border-[#205540] rounded-2xl p-6 flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-[#D4A24C]/20 border border-[#D4A24C] flex items-center justify-center text-[#D4A24C] shrink-0 font-serif-display font-bold text-lg">
-                ₹99
-              </div>
-              <div>
-                <span className="text-xs uppercase tracking-widest text-[#D4A24C] font-bold block">
-                  FREE EXPRESS DELIVERY
-                </span>
-                <p className="text-xs text-[#BACDC2] mt-0.5">
-                  Complimentary temperature-controlled delivery for all orders above ₹99 across the city!
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Right Column: Interactive Contact Form */}
